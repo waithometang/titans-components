@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Titans-Components",
   description: "基于element-plus组件二次封装",
+  base: "/titans-components/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
