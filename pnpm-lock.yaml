@@ -59,6 +59,13 @@ importers:
         version: 2.2.12(typescript@5.8.3)
 
   packages/components:
+    dependencies:
+      '@titans-components/utils':
+        specifier: workspace:*
+        version: link:../utils
+      vue:
+        specifier: ^3.5.17
+        version: 3.5.18(typescript@5.8.3)
     devDependencies:
       '@vitest/coverage-v8':
         specifier: ^3.2.4
@@ -85,10 +92,10 @@ importers:
   packages/hooks: {}
 
   packages/play:
-    devDependencies:
-      '@vitejs/plugin-vue':
-        specifier: ^6.0.0
-        version: 6.0.1(vite@7.0.6(@types/node@24.1.0)(sass@1.89.2))(vue@3.5.18(typescript@5.8.3))
+    dependencies:
+      titans-components:
+        specifier: workspace:*
+        version: link:../core
 
   packages/theme: {}
 

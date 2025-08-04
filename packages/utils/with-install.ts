@@ -11,7 +11,7 @@ export function makeInstaller(components: Plugin[]) {
 
 export function withInstall<T extends Component>(component: T) {
   (component as SFCWithInstall<T>).install = (app: App) => {
-    const { name } = (component as any).name;
+    const { name } = component as any;
     app.component(name, component);
   };
 

@@ -1,5 +1,6 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import TitansComponents from "titans-components";
+import "@titans-components/theme/index.scss";
 
-createApp(App).mount('#app')
+createApp(App).use(TitansComponents).mount("#app");
