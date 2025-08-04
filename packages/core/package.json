@@ -1,10 +1,31 @@
 {
   "name": "titans-components",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Components Library for Titans",
+  "type": "module",
+  "main": "./dist/umd/index.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/core/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/core/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/umd/index.cjs"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "sideEffects": [
+    "./dist/index.css"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-s build-only move-style",
+    "build-only": "run-p build-es build-umd",
+    "build-umd": "vite build --config vite.umd.config.ts",
+    "build-es": "vite build --config vite.es.config.ts",
+    "move-style": "move-file dist/es/index.css dist/index.css"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +33,11 @@
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
     "@titans-components/components": "workspace:*"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.17"
   }
 }

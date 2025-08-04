@@ -7,20 +7,21 @@
     "dev": "pnpm --filter @titans-components/play dev",
     "docs:dev": "pnpm --filter @titans-components/docs dev",
     "docs:build": "pnpm --filter @titans-components/docs build",
-    "test": "echo 'test'"
+    "test": "echo 'test'",
+    "build": "pnpm --filter titans-components build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
+    "@titans-components/hooks": "workspace:*",
+    "@titans-components/theme": "workspace:*",
+    "@titans-components/utils": "workspace:*",
     "lodash-es": "^4.17.21",
     "sass": "^1.89.2",
-    "vue": "^3.5.17",
     "titans-components": "workspace:*",
-    "@titans-components/hooks": "workspace:*",
-    "@titans-components/utils": "workspace:*",
-    "@titans-components/theme": "workspace:*"
+    "vue": "^3.5.17"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12",
@@ -28,6 +29,8 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "@vitejs/plugin-vue-jsx": "^5.0.1",
     "@vue/tsconfig": "^0.7.0",
+    "move-file-cli": "^3.0.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
     "vitest": "^3.2.4",
