@@ -4,5 +4,5 @@ import "@titans-components/theme/index.scss";
 
 const installer = makeInstaller(components);
 
-export * from "@titans-components/components";
+export * from "../components";
 export default installer;

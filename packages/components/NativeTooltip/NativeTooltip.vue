@@ -5,5 +5,5 @@ defineOptions({
 </script>
 
 <template>
-  <div>我是标题</div>
+  <div>我是标题基于title封装的tooltip</div>
 </template>
